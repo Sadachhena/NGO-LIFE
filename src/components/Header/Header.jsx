@@ -36,7 +36,7 @@ export default function Header() {
      </div>
      {/* {NavLink} */}
      <div>
-        <ul className="flex justify-center items-center gap-5">
+        <ul className="flex justify-center items-center gap-5 text-xl">
             {Nav.map((items,i)=>{
                 return(
                     <li key={i}>
