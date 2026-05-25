@@ -30,7 +30,7 @@ export default function Header() {
   return (
     <header className="w-full mx-auto px-10 shadow-lg p-2 flex-col ">
       {/* Top Bar */}
-<div className="bg-[#6a0d5c] text-white flex justify-between items-center px-8 py-3 text-sm">
+<div className="bg-[#6a0d5c] text-white justify-between items-center hidden md:flex px-8 py-3 text-sm">
 
   {/* Contact Info */}
   <div className="flex items-center gap-8">
@@ -79,29 +79,41 @@ export default function Header() {
 
   </div>
 </div>
-      {/* {Second div} */}
-      <div className="flex items-center justify-between py-5">
-     {/* {Logo} */}
-     <div>
-        <h2>Logo</h2>
-     </div>
-     {/* {NavLink} */}
-     <div>
-        <ul className="flex justify-center items-center gap-5 text-xl">
-            {Nav.map((items,i)=>{
-                return(
-                    <li key={i}>
-                     {items.name}
-                    </li>
-                )
-            })}
-        </ul>
-     </div>
-     {/* {DonoteButton} */}
-     <div>
-        <button className="bg-orange-400 text-xl rounded-lg">Donote</button>
-     </div>
-      </div>  
+      {/* Second Navbar */}
+<div className="flex justify-between items-center py-5 px-6 lg:px-10 bg-white">
+
+  {/* Logo */}
+  <div>
+    <h2 className="text-4xl font-extrabold">
+      <span className="text-black">Life</span>
+      <span className="text-orange-500">line</span>
+    </h2>
+  </div>
+
+  {/* NavLinks */}
+  <div className="hidden lg:block">
+    <ul className="flex items-center gap-10 font-semibold text-[17px] text-gray-800">
+      {Nav.map((items, i) => {
+        return (
+          <li
+            key={i}
+            className="cursor-pointer hover:text-orange-500 duration-300"
+          >
+            {items.name}
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+
+  {/* Donate Button */}
+  <div>
+    <button className="bg-orange-500 hover:bg-orange-600 duration-300 text-white font-semibold px-8 py-4 rounded-full text-lg">
+      Donate Now
+    </button>
+  </div>
+
+</div>
     </header>
   )
 }
