@@ -4,6 +4,7 @@ import Hero from '../components/Hero/Hero'
 import MobileNavBar from '../components/Header/MobileNavBar'
 import Donation from '../components/Donation/Donation'
 import Categories from '../components/Categories/Categories'
+import Empower from '../components/Empower/Empower'
 
 export default function Home() {
   
@@ -16,6 +17,7 @@ export default function Home() {
    <MobileNavBar pshow={pshow} setPshow={setPshow} />
    <Donation active={active} setActive={setActive}/>
    <Categories />
+   <Empower />
    </>
   )
 }
