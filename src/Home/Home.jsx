@@ -5,6 +5,11 @@ import MobileNavBar from '../components/Header/MobileNavBar'
 import Donation from '../components/Donation/Donation'
 import Categories from '../components/Categories/Categories'
 import Empower from '../components/Empower/Empower'
+import HelpPower from '../components/HelpPower/HelpPower'
+import HelpingHand from '../components/HelpingHand/HelpingHand'
+import RecentNews from '../components/RecentNews/RecentNews'
+import Sponsors from '../components/Sponsors/Sponsors'
+import Footer from '../components/Footer/Footer'
 
 export default function Home() {
   
@@ -18,6 +23,11 @@ export default function Home() {
    <Donation active={active} setActive={setActive}/>
    <Categories />
    <Empower />
+   <HelpPower />
+   <HelpingHand />
+   <RecentNews />
+   <Sponsors />
+   <Footer />
    </>
   )
 }
